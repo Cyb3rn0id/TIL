@@ -12,4 +12,6 @@ Far eseguire nodered in automatico alla partenza del sistema:
 $ sudo systemctl enable nodered.service
 ```
 Accesso alla dashboard:
+```
 localhost:1880/ui
+```
