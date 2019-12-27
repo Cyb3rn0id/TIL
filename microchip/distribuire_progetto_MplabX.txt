@@ -1,0 +1,19 @@
+Un progetto MPLAB X è una cartella con estensione .X contenente particolari files che vengono riconosciuti dall'IDE.
+Gli elementi da distribuire sono:
+
+Nella radice della cartella:
+- tutti gli eventuali files sorgente (es.: main.c)
+- il file "makefile" (senza estensione)
+- il file MyConfig.mc3 (eventualmente creato dal code configurator)
+
+NO cartella build
+NO cartella debug
+NO cartella dist
+
+Cartella nbproject:
+- configurations.xml
+- Makefile-genesis.properties
+- project.xml
+NO cartella private
+
+Eventualmente presente, tutta la cartella mcc_generated_files
