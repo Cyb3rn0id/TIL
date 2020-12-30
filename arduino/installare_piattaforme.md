@@ -31,11 +31,15 @@ Per gli XMC è necessario installare anche il Segger J-Link, presente a questo i
 
 Ulteriori informazioni qui: https://github.com/Infineon/XMC-for-Arduino
 
+#### STM32
+
+https://raw.githubusercontent.com/stm32duino/BoardManagerFiles/master/STM32/package_stm_index.json
+
 #### Tutto insieme
 
 Questi sono tutti i files json di sopra, separati da virgola:
 
-http://arduino.esp8266.com/stable/package_esp8266com_index.json,https://raw.githubusercontent.com/jantje/arduino-esp32/master/package/package_Espressif_esp32_index.json,https://github.com/Infineon/Assets/releases/download/current/package_infineon_index.json,https://github.com/chipKIT32/chipKIT-core/raw/master/package_chipkit_index.json
+http://arduino.esp8266.com/stable/package_esp8266com_index.json,https://raw.githubusercontent.com/jantje/arduino-esp32/master/package/package_Espressif_esp32_index.json,https://github.com/Infineon/Assets/releases/download/current/package_infineon_index.json,https://github.com/chipKIT32/chipKIT-core/raw/master/package_chipkit_index.json,https://raw.githubusercontent.com/stm32duino/BoardManagerFiles/master/STM32/package_stm_index.json
 
 
 ## Piattaforme da installare in altro modo
