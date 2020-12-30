@@ -40,12 +40,11 @@ Aggiungere alla fine del file:
     SSID nomedellarete
     inform 192.168.1.13
     static routers=192.168.1.1
-    static domain_name_servers=8.8.8.8
-    static domain_search=8.8.4.4
+    static domain_name_servers=8.8.8.8 8.8.4.4
     noipv6
     
 Cambia gli indirizzi ip (nell'esempio il 13 è quello che voglio assegnare e 1 -static_routers- è quello del router).  
-Gli altri due indirizzi IP sono di google, sono insicuro sul "domain_search"
+Gli altri due indirizzi IP sono di google. Mi è capitato col raspberry pi4 che alcuni indirizzi IP, anche se validi e il raspberry si collegava alla rete, il raspberry rimane comunque "invisibile" alla rete per cui i servizi come internet, SSH e VNC non funzionano. La cosa migliore è fargli assegnare l'IP in automatico e poi usare lo stesso IP assegnato come fisso.
 
 ### Eliminare il messaggio all'avvio dell'SSH che rompe sulla password di default
 
