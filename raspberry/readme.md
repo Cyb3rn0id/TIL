@@ -52,3 +52,7 @@ Gli altri due indirizzi IP sono di google. Mi è capitato col raspberry pi4 che 
     
 Questo elimina un programmino che fa il check della password all'avvio
 
+### Eseguire uno script python all'avvio
+
+Bisogna modificare il file /etc/rc.local inserendo una chiamata ad uno script sh il quale a sua volta richiama l'interprete python con il nome dello script da avviare
+
