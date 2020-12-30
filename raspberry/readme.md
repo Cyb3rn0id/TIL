@@ -44,5 +44,12 @@ Aggiungere alla fine del file:
     static domain_search=8.8.4.4
     noipv6
     
-cambia gli indirizzi ip (nell'esempio il 13 è quello che voglio assegnare e 1 -static_routers- è quello del router).  
+Cambia gli indirizzi ip (nell'esempio il 13 è quello che voglio assegnare e 1 -static_routers- è quello del router).  
 Gli altri due indirizzi IP sono di google, sono insicuro sul "domain_search"
+
+### Eliminare il messaggio all'avvio dell'SSH che rompe sulla password di default
+
+    sudo apt purge libpam-chksshpwd
+    
+Questo elimina un programmino che fa il check della password all'avvio
+
