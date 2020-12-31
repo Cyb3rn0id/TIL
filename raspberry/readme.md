@@ -39,21 +39,29 @@ Salvarlo nella root della SD. L'impostazione è permanente.
 
 ### Impostare IP statico col Wi-Fi
 
-Aprire il file _dhcpcd.conf_
+Controllare lo stato del servizio dhcpcd:
+
+    sudo service dhcpcd status
+    
+Dovrebbero uscire dei messaggi in cui dice che il servizio è attivo, se così non fosse, attivarlo e fare in modo che si attivi in automatico all'avvio:
+
+    sudo service dhcpcd start
+    sudo systemctl enable dhcpcd
+    
+Ora aprire il file _dhcpcd.conf_
 
     sudo nano /etc/dhcpcd.conf
     
 Aggiungere alla fine del file:
 
-    SSID nomedellarete
-    inform 192.168.1.13
+    interface wlan0
+    static ip_address=192.168.1.13/24
     static routers=192.168.1.1
-    static domain_name_servers=8.8.8.8 8.8.4.4
+    static domain_name_servers=192.168.1.1 8.8.8.8 8.8.4.4
     noipv6
     
-Cambiare gli indirizzi ip (nell'esempio il 13 è quello che voglio assegnare e 1 -static_routers- è quello del router).  
-Gli altri due indirizzi IP sono dei server DNS di Google. Mi è capitato col raspberry pi4 che alcuni indirizzi IP, anche se validi e con il Raspberry che si collegava alla rete, il raspberry rimane comunque "invisibile" alla rete per cui i servizi come internet, SSH e VNC non funzionano.  
-La cosa migliore è fargli assegnare l'IP in automatico e poi usare lo stesso IP assegnato come fisso.
+Cambiare gli indirizzi ip (nell'esempio il 13 è quello che voglio assegnare e 1 -static_routers- è quello del router, lasciare lo /24 alla fine dell'indirizzo IP).  
+Gli altri due indirizzi IP sono dei server DNS di Google. Le versioni precedenti di Raspbian accettavano _SSID (nome della rete WiFi)_ al posto di _interface wlan0_ e _inform 192.168.1.13_ al posto di _static ip_address=192.168.1.13/24_ provando ad utilizzare queste vecchie sintassi si nota che il simbolo del WiFi sul raspberry scorre di continuo (per dire: collegamento in corso) anzichè rimanere fisso, andando a controllare il servizio DHCPCD come illustrato prima viene scritto in rosso _unknown option: SSID_ e utilizzando un'app come FING su Android, viene rilevato che l'indirizzo IP è assegnato ma il Raspberry è comunque invisibile alla rete (non è possibile collegarsi ad internet, non si può usare SSH, VNC ecc). Cambiando solo _SSID_ con _interface wlan0_, il servizio DHCPCD non mostra errori ma si ha lo stesso comportamento: Raspberry invisibile alla rete. La sintassi da utilizzare, che a me ha funzionato su Raspberry Pi4 con l'ultima versione (dicembre 2020) di Raspberry Pi OS, è quella illustrata sopra.
 
 ### Eliminare il messaggio all'avvio dell'SSH che rompe sulla password di default
 
