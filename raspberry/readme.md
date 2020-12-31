@@ -33,9 +33,13 @@ Scrivere nel file:
     network={
       ssid="nome rete"
       psk="password"
+      key_mgmt=WPA-PSK
     }
     
 Salvarlo nella root della SD. L'impostazione è permanente.
+Il contenuto di questo file viene trasferito nel file _wpa_supplicant_ che si può editare con:
+
+    sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
 
 ### Impostare IP statico col Wi-Fi
 
