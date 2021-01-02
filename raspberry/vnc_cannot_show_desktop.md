@@ -3,8 +3,8 @@
 Questo messaggio viene mostrato da un client VNC (su un pc o sul cellulare) quando ci colleghiamo al Raspberry PI su cui è abilitato il server VNC. Le cause di questo messaggio sono molteplici. Personalmente ho risolto cambiando la risoluzione:
 
 - Con un client SSH colleghiamoci al Raspberry Pi (personalmente utilizzo PuTTY)
-- Facciamo partire il _raspi-config_:
-
+- Facciamo partire il _raspi-config_ :
+    
     sudo raspi-config
     
  - Selezionare la voce _2 Display Options_
