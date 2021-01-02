@@ -8,4 +8,4 @@
 - [Problemi visualizzazione video HDMI](problemi_video_hdmi.md)
 - [Verificare il funzionamento della Raspberry Pi Camera](test_raspberry_pi_camera.md)
 - [VNC non mostra il Desktop](vnc_cannot_show_desktop.md)
-- [Ho bisogno del file originale config.txt](/files/config.txt)
+- [Ho bisogno del file originale config.txt](files/config.txt)
