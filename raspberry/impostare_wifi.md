@@ -18,3 +18,5 @@ Salvarlo nella root della SD. L'impostazione è permanente.
 Il contenuto di questo file viene trasferito nel file _wpa_supplicant_ che si può editare con:
 
     sudo nano /etc/wpa_supplicant/wpa_supplicant.conf
+
+Nella cartella _/files/_ è contenuto un file [wpa_supplicant.conf di esempio](/files/wpa_supplicant.conf)

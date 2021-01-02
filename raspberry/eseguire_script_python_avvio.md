@@ -23,4 +23,6 @@ Alla fine del file (dopo l'istruzione _fi_), aggiungere il nome del file sh comp
 
     //home/pi/startup.sh start
     
-Chiudere e salvare. Al prossimo riavvio il file python sarà eseguito in automatico
+Chiudere e salvare. Al prossimo riavvio il file python sarà eseguito in automatico.
+
+Nella cartella _/files/_ è contenuto il file [rc.local di deafult](/files/rc.local)
