@@ -35,4 +35,4 @@ Se il nostro dispositivo viene collegato successivamente ad un altro che "si è 
  A questo punto la cosa migliore da fare, in ogni caso, è quella di assegnare indirizzi IP statici direttamente dal router.
  Nel modem della TIM, ad esempio, è possibile farlo dal menù _Il mio Media Access Gateway_ > _DHCPv4_ qui bisogna cliccare _Mostra Controlli avanzati_ e compare una sezione _Indirizzi IP Statici_, cliccando sul tasto _Aggiungere indirizzo statico_ è possibile selezionare da un elenco il dispositivo nella colonna _Nomehost_: in questo caso il campo del MAC Address viene compilato in automatico, altrimenti se il nostro dispositivo non compare perchè non si è collegato, possiamo scrivere l'indirizzo MAC a mano.
 
- ![IP statico modem TIM](/img/ip_fisso_modem_tim.png)
+ ![IP statico modem TIM](img/ip_fisso_modem_tim.png)
