@@ -2,18 +2,17 @@
 
 Questo messaggio viene mostrato da un client VNC (su un pc o sul cellulare) quando ci colleghiamo al Raspberry PI su cui è abilitato il server VNC. Le cause di questo messaggio sono molteplici. Personalmente ho risolto cambiando la risoluzione:
 
-- Con un client SSH colleghiamoci al Raspberry Pi (personalmente utilizzo [PuTTY](https://www.putty.org/))
-- Facciamo partire il _raspi-config_ :
--
+-Con un client SSH colleghiamoci al Raspberry Pi (personalmente utilizzo [PuTTY](https://www.putty.org/))
+-Facciamo partire il _raspi-config_ :  
 
-    sudo raspi-config
-  
-- Selezionare la voce _2 Display Options_
-- Selezionare la voce _D1 Resolution_
-- Selezionare la massima risoluzione possibile (es.: _DMT Mode 82 1920x1080 60Hz 16:9_)
-- Compare il messaggio _The resolution is set to DMT Mode 82_ (se è stato scelto, chiaramente, DMT Mode 82). Premere invio
-- Selezionare _Finish_ in basso a destra per uscire dal Raspi-Config
-- Vi viene chiesto di riavviare. Riavviate
+    sudo raspi-config  
+    
+-Selezionare la voce _2 Display Options_
+-Selezionare la voce _D1 Resolution_
+-Selezionare la massima risoluzione possibile (es.: _DMT Mode 82 1920x1080 60Hz 16:9_)
+-Compare il messaggio _The resolution is set to DMT Mode 82_ (se è stato scelto, chiaramente, DMT Mode 82). Premere invio
+-Selezionare _Finish_ in basso a destra per uscire dal Raspi-Config
+-Vi viene chiesto di riavviare. Riavviate
  
 Se questo non dovesse funzionare, in rete sono documentate altre soluzioni, tra cui:
  
