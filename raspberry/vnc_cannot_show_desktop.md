@@ -6,7 +6,7 @@ Questo messaggio viene mostrato da un client VNC (su un pc o sul cellulare) quan
 - Facciamo partire il _raspi-config_:
 
     sudo raspi-config
-
+    
  - Selezionare la voce _2 Display Options_
  - Selezionare la voce _D1 Resolution_
  - Selezionare la massima risoluzione possibile (es.: _DMT Mode 82 1920x1080 60Hz 16:9_)
