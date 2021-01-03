@@ -2,6 +2,7 @@
 
 - [Abilitare SSH all'avvio in modalità headless](abilitare_SSH.md)
 - [Eliminare il warning SSH con password di default](eliminare_warning_ssh.md)
+- [Il Raspberry Pi non si collega al WiFi](unable_to_connect_to_the_network.md)
 - [Eseguire uno script Python all'avvio](eseguire_script_python_avvio.md)
 - [Impostare IP statico col WiFi](impostare_ip_statico.md)
 - [Impostare WiFi all'avvio in modalità headless](impostare_wifi.md)
