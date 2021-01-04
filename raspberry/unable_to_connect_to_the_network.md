@@ -1,9 +1,11 @@
 ### Raspberry Pi che non si collega al WiFi
 
 Questo problema l'ho avuto spesso con il Raspberry Pi4 mentre non l'ho mai avuto con il 3, nè con il 2 munito di dongle WiFi compatibile. 
-La procedura guidata mostra il messaggio "Unable to connect to the network". Il problema può presentarsi sempre anche con il _wpa_supplicant.conf_ correttamente configurato.
 
-Il motivo del mancato collegamento è un mistero. La prima cosa da fare, piuttosto scontata, è quella di controllare la corretta digitazione della password.  
+La procedura guidata mostra il messaggio <kbd>Unable to connect to the network</kbd>. Il problema può presentarsi sempre anche con il `wpa_supplicant.conf` correttamente configurato.
+
+Il motivo del mancato collegamento è un mistero. La prima cosa da fare, piuttosto scontata, è quella di controllare la corretta digitazione della password.
+
 Successivamente, su internet sono documentate condizioni particolari causate dall'utilizzo di particolari cavi HDMI con una certa risoluzione.
 Esempi:
 
@@ -12,7 +14,7 @@ Esempi:
 
 Per cui il primo consiglio è:
 
-- Provate ad abbassare la risoluzione (lo potete fare dal _raspi-config_).
+- Provate ad abbassare la risoluzione (lo potete fare dal `raspi-config`).
 - Se ne avete la possibilità, provate a cambiare cavetto HDMI
 
 Se tutto questo non funziona, provate queste altre soluzioni:
@@ -25,5 +27,5 @@ Se tutto questo non funziona, provate queste altre soluzioni:
 
 **Cambiate la modalità WiFi** - in genere i router o gli access point hanno abilitata la modalità WiFi b/g/n o automatica: provate a cambiarla mettendo, se c'è la possibiltà, la modalità "solo N".
 
-Su internet alcuni danno il consiglio di non utilizzare il carattere _underscore_ nel nome della rete WiFi perchè qualcuno è riuscito a collegarsi dopo aver compiuto questa operazione. 
+Su internet alcuni danno il consiglio di non utilizzare il carattere <kbd>underscore</kbd> nel nome della rete WiFi perchè qualcuno è riuscito a collegarsi dopo aver compiuto questa operazione. 
 In realtà anche io ho l'underscore nel SSID della mia rete, ma comunque non riuscivo a collegarmi nemmeno dopo averlo tolto. In aggiunta ho messo l'underscore anche nel nome dell'hotspot del cellulare e invece qui si collegava sempre, pertanto la questione dell'underscore per me non ha funzionato.
