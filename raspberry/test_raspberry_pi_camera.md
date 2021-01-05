@@ -11,3 +11,4 @@ Nel caso in cui venga generato un errore verificare le seguenti cose:
 - che il flat sia correttamente innestato lato telecamera nonchè orientato bene (ha i contatti solo da un lato)
 - che il flat sia correttamente innestato lato Raspberry nonchè orientato bene (ha i contatti solo da un lato)
 - che il flat non sia danneggiato
+- che abbiate innestato il flat, lato Raspberry, sul connettore giusto: alcuni lo agganciano al connettore **display** anzichè a quello **camera**
