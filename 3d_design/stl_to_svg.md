@@ -20,3 +20,5 @@ La terza riga importa il modello STL in OpenScad. Scrivere il percorso completo 
 Premere quindi il tasto `Preview` (o premere <kbd>F5</kbd>) e quindi il tasto `Render` (o premere <kbd>F6</kbd>).  
 
 Esportare quindi con `File` > `Export` > `Export as SVG`
+
+A volte si può presentare un errore del tipo: `ERROR: CGAL error in CGAL_Nef_polyhedron3(): CGAL ERROR: assertion violation!` o cose simili: questo accade perchè l'STL è danneggiato (anche OpenScad stesso genera a volte STL 'danneggiati') ed è quindi necessario 'ripararlo'. Ho avuto successo utilizzando questo tool online: [https://www.formware.co/onlinestlrepair](https://www.formware.co/onlinestlrepair)
