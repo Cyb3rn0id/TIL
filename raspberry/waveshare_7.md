@@ -35,20 +35,53 @@ config_hdmi_boost=7
 hdmi_group=2  
 hdmi_mode=88  
 hdmi_drive=1  
-hdmi_cvt 1024 600 60 6 0 0 0
+hdmi_cvt=1024 600 60 6 0 0 0
 ```   
 
 (grazie a [questo gist di pierrealexaline](https://gist.github.com/pierrealexaline/0aa6d38ccdcf6cb21fc4c22387a413be)).  
+  
+Spiegazione dei flag:  
+- max_usb_current=1  => Serve ad abilitare la massima corrente erogabile sulle porte USB dato che il monitor verrà alimentato da li. Questo flag, in realtà, su Raspberry Pi4 non ha nessun effetto dato che su questo SBC già viene erogata la corrente massima su USB
+- hdmi_force_hotplug=1  => Forza l'attivazione dell'uscita HDMI anche se non viene rilevato nessun monitor collegato
+- config_hdmi_boost=7  => Qui è impostabile un valore da 0 (debole) a 11 (forte) che determina la potenza del segnale sul cavo HDMI, si aumenta questo valore in caso di cavi molto lunghi o presenza di interferenze a video
+- hdmi_group=2  => Specifica il tipo di HDMI (1=CEA, 2=DMT). CEA (Consumer Electronics Association) è utilizzato per le TV e supporta le risoluzioni normalmente utilizzate dalle semplici televisioni, DMT (Display Monitor Timings) è utilizzato per i monitor, che supportano svariate risoluzioni che normalmente non si trovano sulle normali TV.
+- hdmi_mode=88  => il valore di hdmi_mode assume un significato diverso a seconda del valore di hdmi_group. In particolare, per hdmi_group=2, un valore superiore ad 86 indica una modalità "personalizzata", ovvero con valori larghezza/altezza/refresh non tabellati (vedi in fondo "link utili").
+- hdmi_drive=1  => 1=modalità DVI senza suono, 2=modalità HDMI (sul display tipo QLED potete mettere il valore 2 se volete estrarre l'audio da HDMI e sfruttare quini il jack incluso su quel modello di monitor)
+- hdmi_cvt=1024 600 60 6 0 0 0 => CVT sta per Coordinated Video Timing (anche se a me piace pensare alla 'C' come 'custom'):
+    - Il formato di questo flag è `hdmi_cvt=[width] [height] [framerate] [aspect] [margins] [interlace] [rb]` e solo i primi 3 valori sono obbligatori, mentre i restanti sono facoltativi. Abbiamo quindi impostato:
+    -  width=1024
+    -  height=600
+    -  framerate=60Hz
+    -  aspect=6 (aspect ratio, questo valore imposta 15:9), valori possibili:
+        -  1=4:3
+        -  2=14:9
+        -  3=16:9
+        -  4=5:4
+        -  5=16:10
+        -  6=15:9
+        -  Nota: Nessuno di questi valori è identico alla risoluzione del monitor in questione, quindi mettiamo un valore che si avvicina, dovrebbe andare bene anche 3 (16:9)
+    -  margins=0 (0=margini disabilitati, 1=margini abilitati. Questo flag sembra essere l'opposto dell'opzione di configurazione disable_overscan)
+    -  interlace=0 (0=scansione progressiva, 1=interlacciato)
+    -  rb=0 (reduced blanking, 0=disabilitato, 1=abilitato)
 
-Dopo aver fatto questo, al riavvio probabilmente retropie non parte e mostra questo errore:  
+    Nota: volendo utilizzare entrambe le uscite HDMI è possibile utilizzare monitor diversi e quindi specificare diverse impostazioni per per hdmi_cvt postponendo uno 0 per uscita HDMI0 o un 1 per uscita HDMI1, frapponendo il segno di due punti (`hdmi_cvt:0` e `hdmi_cvt:1`).
+
+    Nota2: Se anche tutto questo non funziona, c'è un ulteriore flag di configurazione, `hdmi_timings`, ancora più complicato e spiegato bene nel tutorial di Adafruit linkato in basso
+
+Dopo aver fatto questo, al riavvio probabilmente retropie non partirà mostrando questo errore:  
 
 `Error creating SDL window / Could not get SDL display`  
 
-Digitare `sudo raspi-config`  
+Si viene riportati al prompt dei comandi. Digitare `sudo raspi-config`  per avviare raspi-config.
 Selezionare <kbd>2 Display options</kbd> e quindi <kbd>D1-resolution</kbd>.  
 Nella lista dovrebbero apparire un paio di voci che normalmente non c'erano prima della modifica al config. Selezionare <kbd>DMT mode 88 1024x600 60Hz 15:9</kbd>
 
-    è praticamente l'impostazione che abbiamo messo in config.txt, credo che questo passaggio sia comunque inutile   
+    è praticamente l'impostazione che abbiamo messo in config.txt, credo che, in realtà, questo passaggio sia inutile
 
 Tornare al menù principale e selezionare <kbd>6 Advanced Options</kbd> e quindi <kbd>A2 GL driver</kbd>.   
 Qui io ho selezionato <kbd>G2 GL (fake KMS) ...</kbd> ho riavviato e ha funzionato tutto correttamente su entrambi i modelli di display.
+
+### Link utili
+- [Tutti i parametri impostabili in config.txt](https://elinux.org/RPi_Configuration)
+- [tutorial Adafruit fatto molto bene](https://learn.adafruit.com/using-weird-displays-with-raspberry-pi/everything-else)
+- [Tabella con gli HDMI mode](https://onlinelibrary.wiley.com/doi/pdf/10.1002/9781119415572.app3)
