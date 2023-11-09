@@ -11,3 +11,4 @@
 - [VNC non mostra il Desktop](vnc_cannot_show_desktop.md)
 - [Processi e come terminarli](terminare_processi.md)
 - [Ho bisogno del file originale config.txt](files/config.txt)
+- [Visualizzare correttamente il monitor Waveshare touch 7" 1024x600](waveshare_7.md)
