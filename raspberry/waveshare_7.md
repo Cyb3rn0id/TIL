@@ -3,11 +3,11 @@
 Prova fatta su Raspberry Pi4 con RetroPie e tutti gli aggiornamenti di Ottobre 2023
 
 Del monitor Waveshare 7" (risoluzione 1024x600, touch capacitivo) ne esistono due versioni:  
-- la prima versione ha i pulsanti per le regolazioni, due porte USB (una per il touch e una per l'alimentazione) e l'uscita audio su jack 3.5mm
-- la seconda versione ha soltanto una porta USB utilizzata sia per touch che per alimentazione (non ci sono i pulsanti, non c'è il jack). Questa versione ha il PCB marchiato come "rev 4.1" [link](https://www.waveshare.com/7inch-hdmi-lcd-c.htm)
 
-La prima versione non mi ha mai creato problemi, mentre la seconda si. Ho testato questo metodo con entrambi i modelli di display.  
-Qui metto le istruzioni per farlo funzionare correttamente in retropie, anche se dovrebbero andar bene anche per Raspberry Pi Os.  
+- la versione "QLED Quantum Dot" : ha i pulsanti per le regolazioni, due porte USB (una per il touch e una per l'alimentazione) e l'uscita audio su jack 3.5mm. Ha un adesivo posteriore con la scritta "7HP-CAPQLED" => [link](https://www.waveshare.com/7hp-capqled.htm)
+- la versione "IPS Low Power" : questa ha soltanto una porta USB utilizzata sia per touch che per alimentazione (non ci sono i pulsanti, non c'è il jack). Questa versione ha il PCB marchiato come "rev 4.1" => [link](https://www.waveshare.com/7inch-hdmi-lcd-c.htm)
+
+La prima versione non mi ha mai creato problemi, mentre la seconda qualche problema (risolvibilissimo) si. Ho testato questo metodo con entrambi i modelli di display.  Qui metto le istruzioni per farli funzionare correttamente in retropie, anche se dovrebbero andar bene anche per Raspberry Pi Os.  
 
   
 Estrarre la SD e leggerla su un altro pc.  
