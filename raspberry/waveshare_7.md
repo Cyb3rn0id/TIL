@@ -11,7 +11,7 @@ La prima versione non mi ha mai creato problemi, mentre la seconda qualche probl
   
 Estrarre la SD e leggerla su un altro pc (oppure editare il config.txt con nano)  
 Aprire il file <kbd>config.txt</kbd>    
-Andare in fondo al file fino alla sezione `[rpi4]`: commentare (mettere #) davanti alle due righe:  
+Andare in fondo al file fino alla sezione `[pi4]`: commentare (mettere #) davanti alle due righe:  
 
 ```
 dtoverlay=vc4-fkms-v3d
@@ -39,7 +39,7 @@ hdmi_cvt=1024 600 60 6 0 0 0
 
 (grazie a [questo gist di pierrealexaline](https://gist.github.com/pierrealexaline/0aa6d38ccdcf6cb21fc4c22387a413be)).  
 
-    Nota: per una versione di Raspberry Pi inferiore alla 4, tutto questo va fatto al di sopra della sezione `[rpi4]`
+    Nota: per una versione di Raspberry Pi inferiore alla 4, tutto questo va fatto al di sopra della sezione `[pi4]`
   
 Spiegazione dei flag:  
 - `max_usb_current=1` Serve ad abilitare la massima corrente erogabile sulle porte USB dato che il monitor verrà alimentato da li. Questo flag, in realtà, su Raspberry Pi4 non ha nessun effetto dato che su questo SBC già viene erogata la corrente massima su USB
