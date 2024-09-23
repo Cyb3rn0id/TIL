@@ -12,8 +12,8 @@ NO cartella dist
 
 Cartella nbproject:
 - configurations.xml
-- Makefile-genesis.properties
 - project.xml
 NO cartella private
+NO makefiles
 
 Eventualmente presente, tutta la cartella mcc_generated_files
