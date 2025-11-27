@@ -19,7 +19,7 @@ X-GNOME-Autostart-enabled=true
 Name=ChromiumKioskAutostart
 Comment=Start Chromium when GUI starts
 ```  
-Salvare il file con <kbd>CTRL</kbd> <kbd>O/<kbd>
+Salvare il file con <kbd>CTRL</kbd> <kbd>O</kbd>  
 Uscire da Nano con <kbd>CTRL</kbd> <kbd>X</kbd>  
   
 ## Problemi riscontrati
