@@ -1,6 +1,7 @@
 ### Problemi e soluzioni Raspberry Pi
 
 - [Abilitare SSH all'avvio in modalità headless](abilitare_SSH.md)
+- [Accendere un led all'avvio del raspberry Pi](accensione_led_all_avvio.md)
 - [Eliminare il warning SSH con password di default](eliminare_warning_ssh.md)
 - [Il Raspberry Pi non si collega al WiFi](unable_to_connect_to_the_network.md)
 - [Eseguire uno script Python all'avvio](eseguire_script_python_avvio.md)
